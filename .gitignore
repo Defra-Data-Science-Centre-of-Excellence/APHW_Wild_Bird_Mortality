@@ -1,0 +1,98 @@
+# ============================================================
+# 📄 Default .gitignore for Defra Data Science Projects
+# ============================================================
+# PURPOSE:
+# This is a **fallback template**, not a catch-all solution.
+# Every project is different — you should **tailor this file**
+# to reflect your specific needs.
+#
+# A .gitignore is only effective when combined with:
+#   ✅ Good security practices (never commit secrets)
+#   ✅ Proper Git hygiene (review changes before committing)
+#   ✅ Awareness of data governance (don’t commit sensitive data)
+#
+# If you need to commit something that matches these patterns,
+# use `git add --force <file>` with caution.
+#
+# For more info: https://git-scm.com/docs/gitignore
+# ============================================================
+
+# ============================
+# 🔒 Environment Variables & Secrets
+# ============================
+.env
+*.key
+*.pem
+config/secrets.yml
+credentials.json
+token.json
+
+# ============================
+# 🐍 Python
+# ============================
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+env*/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+.ipynb_checkpoints
+.spyproject/
+
+# ============================
+# 📊 R
+# ============================
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# ============================
+# 📓 Jupyter
+# ============================
+.ipynb_checkpoints/
+# Optional: ignore notebook outputs if large
+output/*.ipynb
+
+# ============================
+# 📊 Data Files
+# ============================
+# Avoid committing raw or sensitive data
+*.csv
+*.tsv
+*.json
+*.geojson
+*.parquet
+*.sqlite
+*.db
+data/
+raw/
+processed/
+output*/
+# Allow documentation in data folder
+!data/README.md
+
+# ============================
+# 🛠 Logs, OS, & Misc Files
+# ============================
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Linux temp files
+*~
+.Trash-*
